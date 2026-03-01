@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'ui/theme.dart';
 import 'ui/home_page.dart';
 
 void main() {
@@ -12,11 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Knotes',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple, brightness: Brightness.dark),
-        useMaterial3: true,
-      ),
+      title: 'T-memo',
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.darkTheme,
       home: const HomePage(),
     );
   }
